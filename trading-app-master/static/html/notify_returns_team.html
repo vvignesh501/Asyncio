@@ -1,0 +1,36 @@
+ <!DOCTYPE html>
+                <html>
+                <head>
+                <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+                <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+                <style>
+                    div.card-header {font-weight : bold; background-color: #3B8C96;}
+                    a {color : #732B22;}
+                </style>
+                </head>
+                <body>
+                <div class="card">
+                    <div class="card-header">
+                        Hi %s please find the below notification
+                         <center><b>RETURN ORDERS NOTIFICATION TEAM</b></center>
+                        <div align="right"> <a href="/?action=employee_login">Logout</a></div>
+                    </div>
+                    <div class="card-body">
+                        <table class="table table-striped">
+                            <thead class="thead-dark">
+                                <tr>
+                                <th>Order</th>
+                                <th>Username</th>
+                                <th>Product</th>
+                                <th>Returned Qty</th>
+                                <th>Status</th>
+                                <th>User</th>
+                                <th>Destination</th>
+                                </tr>
+                             </thead>
+                        %s
+                        </table>
+                    </div>
+                </div>
+                </body>
+                </html>

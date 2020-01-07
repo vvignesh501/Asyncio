@@ -1,0 +1,49 @@
+  <!DOCTYPE html>
+        <html>
+        <head>
+         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <style>
+            div.card-header {font-weight : bold; background-color: #3B8C96;}
+            a {color : #732B22;}
+        </style>
+        </head>
+        <body>
+             <div class="container justify-content-center">
+                <div class="card">
+                    <div class="card-header">
+                       <div align="center"><b>Hi %s Update your Profile </div>
+                         <center><b>USER PROFILE UPDATION</b></center>
+                       <div align="right"> <a href="?action=view_products">Home</a></div>
+                    </div>
+                    <div class="jumbotron my-auto">
+                        <form action="?action=view_products" method="post">
+                            <p><i><small>(*All fields are mandatory unless specified optional)</small></i></p>
+                            <div class="form-group">
+                                <label for="Username">Username</label>
+                                <input name="user" value="%s" type="text" class="form-control" required="required"
+                                readonly="readonly">
+                            </div>
+                             <div class="form-group">
+                                <label for="exampleInputPassword1">Update Password*</label>
+                                <input name="password" type="password" class="form-control" id="exampleInputPassword1"
+                                placeholder="Password" required="required">
+                            </div>
+                             <div class="form-group">
+                                <label for="Email">Update Email Address*</label>
+                                <input name="email" type="email" placeholder="Email Address" class="form-control"
+                                required="required">
+                            </div>
+                            <div class="form-group">
+                                <label for="street1_id" class="control-label">Update Delivery Address*</label>
+                                <input type="text" class="form-control" id="street1_id" name="address"
+                                placeholder="Delivery Address" required="required">
+                            </div>
+                            <button type="submit" class="btn btn-primary" onclick="alert('Your profile has been
+                            updated');">Update Profile</button>
+                        </form>
+                    </div>
+                </div>
+             </div>
+        </body>
+        </html>

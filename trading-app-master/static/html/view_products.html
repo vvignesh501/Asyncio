@@ -1,0 +1,39 @@
+ <!DOCTYPE html>
+            <html>
+            <head>
+             <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+             integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+            <style>
+                div.card-header {font-weight : bold; background-color: #3B8C96;}
+                a {color : #732B22;}
+            </style>
+            </head>
+            <body>
+             <div class="card">
+                <div class="card-header">
+                    <b>Welcome %s please check the products available and place an order</b>
+                     <center><b>PRODUCT INVENTORY</b></center>
+                    <div align="right"><a href="/?action=orders_history">Orders History</a>
+                        <a href="/?action=update_profile">Update Profile</a>
+                        <a href="/?action=login">Logout</a></div>
+                    </div>
+                    <div class="card-body">
+                    <form action="/?action=make_order" method="post">
+                        <table class="table table-striped">
+                            <thead class="thead-dark">
+                              <tr>
+                                <th>Product Name</th>
+                                <th>Product Description</th>
+                                <th>Price(CAD)</th>
+                                <th>Product Type</th>
+                                <th>Quantity</th>
+                              </tr>
+                            </thead>
+                            %s
+                        </table>
+                        <div align="center"><button type="submit" class="btn btn-primary">Place an Order</button></div>
+                    </form>
+                </div>
+             </div>
+            </body>
+            </html>

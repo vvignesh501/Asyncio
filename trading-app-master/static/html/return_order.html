@@ -1,0 +1,45 @@
+ <!DOCTYPE html>
+                    <html>
+                    <head>
+                     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+                     integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+                     crossorigin="anonymous">
+                    </head>
+                    <style>
+                        div.card-header {font-weight : bold; background-color: #3B8C96;}
+                        a {color : #732B22;}
+                    </style>
+                    <body>
+
+                    <div class="card">
+                        <div class="card-header">
+                            <b>Hi %s We have received your return request. Please click Check to see confirmation
+                            from our end. </b>
+                            <center><b>ORDER RETURN</b></center>
+                            <div class="tags" align="right">
+                                <a href="/?action=view_products">Place Orders</a>
+                                <a href="/?action=orders_history">Orders History</a>
+                            </div>
+                        </div>
+                    <div class="card-body">
+                       <table class="table">
+                             <thead class="thead-dark">
+                                <tr>
+                                    <th> Order Id </th>
+                                    <th> Returned Qty </th>
+                                    <th> Status </th>
+                                     <th> Request </th>
+                                </tr>
+                                <tr>
+                                    <td> %s </td>
+                                    <td> %s </td>
+                                    <td> We are processing your return.  </td>
+                                    <td><a class="btn btn-primary" href="/?action=order_status&ord=%s" role="button">
+                                    Check</a><td>
+                                </tr>
+                             </thead>
+                       </table>
+                    </div>
+                </div>
+                    </body>
+                    </html>

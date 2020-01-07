@@ -1,0 +1,40 @@
+        <!DOCTYPE html>
+        <html>
+        <head>
+         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <style>
+            div.card-header {font-weight : bold; background-color: #3B8C96;}
+            a {color : #732B22;}
+        </style>
+        </head>
+        <body>
+             <div class="container justify-content-center">
+                <div class="card">
+                    <div class="card-header"><div align="center">User Log in </div> </div>
+                    <div class="jumbotron my-auto">
+                        <form action="/?action=view_products" method="post">
+                            <p><small>** Please log in with the same username provided in signup.
+                            Username is considered unique here.</small></p>
+                            <div class="form-group">
+                                <label for="First name">Username</label>
+                                <input name="user" type="text" class="form-control" placeholder="Username"
+                                required="required">
+                            </div>
+                            <div class="form-group">
+                                <label for="exampleInputPassword1">Password</label>
+                                <input type="password" class="form-control" id="exampleInputPassword1"
+                                placeholder="Password" required="required">
+                            </div>
+                            <button type="submit" class="btn btn-primary">Log in</button>
+                        </form>
+                    </div>
+                    <div class="card-footer">
+                       <div align="bottom">
+                            <p> <small> Sign up if you are not a member </small><a href="?action=signup"> Sign up</a><p>
+                       </div>
+                </div>
+             </div>
+             </div>
+        </body>
+        </html>

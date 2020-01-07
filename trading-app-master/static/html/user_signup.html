@@ -1,0 +1,76 @@
+        <!DOCTYPE html>
+        <html>
+        <head>
+         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <script type='text/javascript' src='http://code.jquery.com/jquery.min.js'></script>
+        <script type='text/javascript'>
+            $(function () {
+                $('#searchInput').keyup(function () {
+                    if ($(this).val() == '') {
+                        //Check to see if there is any text entered
+                        // If there is no text within the input ten disable the button
+                        $('.enableOnInput').prop('disabled', true);
+                    } else {
+                        //If there is text in the input, then enable the button
+                        $('.enableOnInput').prop('disabled', false);
+                    }
+                });
+            });
+        </script>
+        <style>
+            div.card-header {font-weight : bold; background-color: #3B8C96;}
+            a {color : #732B22;}
+        </style>
+        </head>
+        <body>
+             <div class="container justify-content-center">
+                <div class="card">
+                    <div class="card-header">
+                        <h2><center> Welcome to FASTRADE </h2>
+                        <p><small><center>Canada's Fastest Online Trading Portal</center></small><p>
+                    </div>
+                    <div class="jumbotron my-auto">
+                         <div align="center">New users sign up below. </div>
+                         <p><small><i>(*All fields are mandatory unless specified optional)</i></small></p>
+                        <form action="?action=login">
+                            <div class="form-group">
+                                <label for="User name">Username*</label>
+                                <input name="user" type="text" class="form-control" placeholder="Please provide a unique username" required="required">
+                            </div>
+                            <div class="form-group">
+                                <label for="exampleInputPassword1">Password*</label>
+                                <input name="password" type="password" class="form-control" id="exampleInputPassword1"
+                                placeholder="Password" required="required">
+                            </div>
+                            <div class="form-group">
+                                <label for="Email">Email Address*</label>
+                                <input name="email" type="text" placeholder="Enter your email" class="form-control"
+                                required="required">
+                            </div>
+                            <div class="form-group">
+                                <label for="street1_id" class="control-label">Address*</label>
+                                <input type="text" class="form-control" id="street1_id" name="address"
+                                placeholder="Delivery Address" required="required">
+                            </div>
+                             <div class="form-group">
+                                <label for="street1_id" class="control-label">Want to become our Premium
+                                VIP User?*</label>
+                                <input type="text" id='searchInput' class="form-control" name="checkbox"
+                                placeholder="Please type Yes or No" required="required">
+                            </div>
+                            <button type="submit" id="submitBtn" class="enableOnInput btn btn-primary"
+                            onclick="alert('Sign up successful!. Please click Log in below');"
+                            disabled="disabled">Sign Up</button>
+                            <div class="form-group">
+                                <br>
+                                <p>Existing member?<a href="?action=login&user=%s&email=%s&address=%s&checkbox=%s">
+                                Log in</a> </p>
+                                 <p>Employee of FASTRADE? <a href="?action=employee_login">Log in</a></p>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </body>
+        </html>

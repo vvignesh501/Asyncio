@@ -1,0 +1,43 @@
+           <!DOCTYPE html>
+            <html>
+                <head>
+                <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+                integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+                crossorigin="anonymous">
+                <style>
+                    div.card-header {font-weight : bold; background-color: #3B8C96;}
+                    a {color : #732B22;}
+                </style>
+                </head>
+                    <body>
+                        <div class="card">
+                            <div class="card-header">
+                               <b> Hi %s we have received you update. Click Check for confirmation from our end. </b>
+                                 <center><b>UPDATE ORDER </b></center>
+                                <div class="tags" align="right">
+                                    <a href="/?action=view_products">Place Orders</a>
+                                    <a href="/?action=orders_history">Order history</a>
+                                </div>
+                            </div>
+                            <div class="card-body">
+                                <table class="table">
+                                    <thead class="thead-dark">
+                                        <tr>
+                                            <th>Order Id</th>
+                                             <th>Updated Quantity</th>
+                                              <th>Status</th>
+                                              <th>Request</th>
+                                        </tr>
+                                        <tr>
+                                            <td> %s </td>
+                                            <td> %s </td>
+                                            <td> We are processing your update. </td>
+                                            <td><a class="btn btn-primary" href="/?action=order_status&ord=%s"
+                                            role="button">Check</a><td>
+                                        </tr>
+                                    </thead>
+                                </table>
+                            </div> <br><br>
+                        </div>
+                    </body>
+            </html>

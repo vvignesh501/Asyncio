@@ -1,0 +1,103 @@
+ <!DOCTYPE html>
+        <html>
+        <head>
+         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <style>
+            div.card-header {font-weight : bold; background-color: #3B8C96;}
+            a {color : #732B22;}
+            .headers {background-color: #3B8C96;}
+        </style>
+        </head>
+        <body>
+         <div class="card">
+            <div class="card-header">
+               Hi %s Please find your Order status
+                 <center><b>ORDER STATUS</b></center>
+                <div class="tags" align="right">
+                    <a href="/?action=view_products">Place Orders</a>
+                    <a href="/?action=orders_history">Check another order status</a>
+                    <a href="/?action=orders_history">Order history</a>
+                </div>
+            </div>
+            <div class ="card-body">
+                <table class="table table-striped">
+                    <thead class="thead-dark">
+                        <tr>
+                            <th>Order</th>
+                            <th>Processed Date</th>
+                            <th>Product</th>
+                            <th>Order to Process</th>
+                            <th>Returned Qty</th>
+                             <th>Cancelled Qty</th>
+                            <th>Delivery Date</th>
+                            <th>Status</th>
+                          </tr>
+                    </thead>
+                    %s
+                </table>
+            </div>
+            <br>
+
+         <div class="card">
+            <div class="headers">
+                <b> Update Order </b>
+            </div>
+            <div class="card-body">
+                <table class="table table-striped">
+                    <thead class="thead-dark">
+                        <form action="http://0.0.0.0:8080" method = "GET">
+                            <input type = "hidden" name="action" value="update_order_quantity"/>
+                            Provide your order Number <input name="order" required="required">
+                            Provide your Product <input name="product" required="required">
+                            Provide the quantity <input type="number" name="quantity" min="1">
+                            <input type="submit" onclick="return confirm('Are you sure you want to update your
+                            order?');" value="Update Order">
+                        </form>
+                    </thead>
+                </table>
+            </div>
+        </div>
+        <br><br>
+
+        <div class="card">
+            <div class="headers">
+                <b> Return Order </b>
+            </div>
+            <div class="card-body">
+                <table class="table table-striped">
+                    <thead class="thead-dark">
+                        <form action="http://0.0.0.0:8080" method = "GET">
+                            <input type = "hidden" name="action" value="return_order"/>
+                            Provide your order Number <input name="order" required="required">
+                            Provide your Product <input name="product" required="required">
+                            Provide the quantity <input type="number" name="quantity" min="1">
+                            <input type="submit" onclick="return confirm('Are you sure you want to return your
+                            order?');" value="Return Order">
+                        </form>
+                    </thead>
+                </table>
+            </div>
+        </div>
+        <br><br>
+
+        <div class="card">
+            <div class="headers">
+                <b> Cancel Order </b>
+            </div>
+            <div class="card-body">
+                <table class="table table-striped">
+                    <thead class="thead-dark">
+                        <form action="http://0.0.0.0:8080" method = "GET">
+                            <input type = "hidden" name="action" value="cancel_order"/>
+                            Provide your order Number <input name="order" required="required">
+                            Provide your Product <input name="product" required="required">
+                            <input type="submit" onclick="return confirm('Are you sure you want to cancel this
+                            order?');" value="Cancel Order">
+                        </form>
+                    </thead>
+                </table>
+            </div>
+        </div>
+        </body>
+        </html>

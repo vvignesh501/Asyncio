@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+         <html>
+         <head>
+          <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+          integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <style>
+             div.card-header {font-weight : bold; background-color: #3B8C96;}
+             a {color : #732B22;}
+         </style>
+         </head>
+         <body>
+          <div class="card">
+             <div class="card-header">
+                 Hi %s please see your Order history
+                  <center><b>ORDER HISTORY</b></center>
+                 <div class="tags" align="right">
+                  <a href="/?action=view_products">Place Orders</a>
+                  <a href="/?action=login">Logout</a>
+                 </div>
+             </div>
+             <div class =card-body">
+                  <table class="table table-striped">
+                     <thead class="thead-dark">
+                       <tr>
+                         <th>Order</th>
+                         <th>Product</th>
+                         <th>Ordered Qty</th>
+                         <th>Returned Qty</th>
+                         <th>Cancelled Qty</th>
+                         <th>Status</th>
+                       </tr>
+                   </thead>
+                     %s
+                 </table>
+             </div>
+         </div><br><br>
+          <div class="card">
+             <div class="headers"><b> Track your Order </b></div>
+             <div class="card-body">
+                 <form action="http://0.0.0.0:8080" method = "GET">
+                     <input type = "hidden" name="action" value="order_status"/>
+                     <tr>
+                     <p>Provide your order Number <input name="ord" required="required">
+                     <button type="submit" class="btn btn-primary">Track Order</button></p>
+                     </tr>
+                 </form>
+             </div><br>
+         </div>
+         </body>
+         </html>

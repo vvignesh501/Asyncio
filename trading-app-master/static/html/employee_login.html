@@ -1,0 +1,58 @@
+ <!DOCTYPE html>
+        <html>
+        <head>
+         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <style>
+            div.card-header {font-weight : bold; background-color: #3B8C96;}
+            a {color : #732B22;}
+        </style>
+        </head>
+        <body>
+             <div class="container justify-content-center">
+                <div class="card">
+                    <div class="card-header">
+                       <div align="center">Employee Log in </div>
+                    </div>
+                    <div class="jumbotron my-auto">
+                        <form onsubmit="return routeUrl();">
+                            <div class="form-group">
+                                <select id="option" name="action" >
+                                    <option selected="selected">Select Team</option>
+                                    <option name="sales_team" value="notify_sales_team">Sales Team</option>
+                                    <option name="vip_assistance_team" value="notify_vip_assistance_team">
+                                    VIP Assistance Team</option>
+                                    <option name="emergency_team" value="notify_emergency_team">
+                                    Emergency Team</option>
+                                    <option name="returns_team" value="notify_returns_management_team">
+                                    Returns Team</option>
+                                    <option name="large_orders_team" value="notify_large_order_team">
+                                    Large Orders Team</option>
+                                    <option name="delivery_team" value="notify_delivery_team">Delivery Team</option>
+                                    <option name="products_team" value="notify_products_management_team">
+                                    Products Team</option>
+                                    <option name="refunds_team" value="notify_refunds_team">Refunds Team</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="First name">Username</label>
+                                <input name="employee" type="text" class="form-control" placeholder="Username"
+                                required="required">
+                            </div>
+                            <div class="form-group">
+                                <label for="exampleInputPassword1">Password</label>
+                                <input type="password" class="form-control" id="exampleInputPassword1"
+                                placeholder="Password" required="required">
+                            </div>
+                            <button type="submit" class="btn btn-primary">Submit</button>
+                        </form>
+                        <script>
+                            function routeUrl(){
+                            window.location.href=document.getElementById('option').value;
+                            }
+                            </script>
+                    </div>
+                </div>
+             </div>
+        </body>
+        </html>

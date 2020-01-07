@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+        <html>
+        <head>
+         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <style>
+            div.card-header {font-weight : bold; background-color: #3B8C96;}
+            a {color : #732B22;}
+        </style>
+        </head>
+        <body>
+        <div class="card">
+            <div class="card-header">
+                <b>Hi %s we have received your order placement. Please click Order status link for confirmation. </b>
+                 <center><b>ORDER PLACEMENT </b></center>
+                <div class="tags" align="right">
+                    <a href="/?action=view_products">Place Orders</a>
+                    <a href="/?action=orders_history">Orders History</a>
+                    <a href="/?action=order_status&ord=%s">Check current Order status</a>
+                </div>
+            </div>
+            <div class="card-body">
+               <table class="table">
+                 <thead class="thead-dark">
+                    <tr>
+                        <th> Order Id </th>
+                        <th> Delivery Date </th>
+                        <th> Delivery Type </th>
+                        <th> Check your status </th>
+                    </tr>
+                    <tr>
+                        <td> %s </td>
+                        <td> TBD </td>
+                        <td> TBD </td>
+                        <td><b><a href="/?action=order_status&ord=%s">Check your order status</a></b></td>
+                    </tr>
+                    </thead>
+                </table>
+            </div>
+        </div>
+
+        </body>
+        </html>
